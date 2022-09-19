@@ -3,6 +3,7 @@
   {
     public function __construct()
     {
+      $this->views = new Views();
       $this->loadModel();
     }
 

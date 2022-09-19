@@ -6,8 +6,8 @@ class Home extends Controllers {
     parent::__construct();
   }
 
-  public function Home($params){
-    echo "<br> Estou no Home: $params";
+  public function Home(){
+    $this->views->getView($this, "home");
   }
 
   public function data($params){

@@ -1,8 +1,6 @@
 <?php require_once("app/config/Config.php") ?>
 
 
-<h1>Loja virtual</h1>
-
 <?php
   $url = !empty($_GET['url']) ? $_GET['url'] : 'home/home';
   $arrUrl = explode("/", $url);
@@ -28,34 +26,6 @@
     }
   }
 
-  spl_autoload_register(function($class){
-    if(file_exists(LIBS . 'Core/' . $class . '.php')){
-      require_once(LIBS . 'Core/' . $class . '.php');
-    }
-  });
-
-  //Load
-  $controllerFile = "app/controllers/" . $controller .".php";
-
-  if (file_exists($controllerFile)) {
-    // echo $controllerFile;
-    require_once($controllerFile);
-    $controller = new $controller();
-    
-    if(method_exists($controller, $method)){
-      $controller->{$method}($params);
-    } else {
-      echo "Metodo inexistente";
-    }
-  } else {
-    echo "Controlador inexistente";
-  }
-  
-  // echo "<br>";
-  // echo "Controlador: ".$controll;
-  // echo "<br>";
-  // echo "Metodo: ".$method;
-  // echo "<br>";
-  // echo "Parametros: ".$params;
-
+  require_once("app/libraries/Core/Autoload.php");
+  require_once("app/libraries/Core/Load.php");
 ?>
