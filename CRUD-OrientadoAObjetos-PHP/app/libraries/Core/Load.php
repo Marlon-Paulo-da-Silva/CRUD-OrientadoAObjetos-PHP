@@ -5,6 +5,8 @@
     // echo $controllerFile;
     require_once($controllerFile);
     $controller = new $controller();
+
+    require_once("app/libraries/Core/Connection.php");
     
     if(method_exists($controller, $method)){
       $controller->{$method}($params);
