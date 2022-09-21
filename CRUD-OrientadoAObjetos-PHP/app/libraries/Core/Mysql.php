@@ -36,7 +36,36 @@
       $result = $this->connection->prepare($this->strQuery);
       $result->execute();
       $data = $result->fetch(PDO::FETCH_ASSOC);
+      return $data;
     }
+
+    public function select_all(string $query = ''){
+      $this->strQuery = $query;
+
+      $result = $this->connection->prepare($this->strQuery);
+      $result->execute();
+      $data = $result->fetch(PDO::FETCH_ASSOC);
+      return $data;
+    }
+
+    public function update(string $query = '', array $arrValues){
+      $this->strQuery = $query;
+      $this->arrValues = $arrValues;
+
+      $update = $this->connection->prepare($this->strQuery);
+      $resExecute = $update->execute($this->arrValues);
+      return $resExecute;
+    }
+
+    public function delete(string $query = ''){
+      $this->strQuery = $query;
+
+      $update = $this->connection->prepare($this->strQuery);
+      $update->execute();
+      return $update;
+    }
+
+    
 
   }
 

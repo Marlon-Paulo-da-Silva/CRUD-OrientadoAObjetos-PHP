@@ -14,8 +14,9 @@ class Home extends Controllers {
     $this->views->getView($this, "home", $data);
   }
 
-  public function data($params){
-    echo "<br> Dados recebidos: $params";
+  public function register(){
+    $data = $this->model->setUser();
+    print_r($data);
   }
 
   public function cart($params){

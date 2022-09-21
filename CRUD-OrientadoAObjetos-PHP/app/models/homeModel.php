@@ -1,14 +1,16 @@
 <?php
-  class homeModel
+  class homeModel extends Mysql
   {
     public function __construct()
     {
-      
+      parent::__construct();
     }
 
-    public function getCart($param){
+    public function setUser(string $name, int $email){
 
-      return $param;
+      
+
+      return $name;
     }
   }
 ?>
