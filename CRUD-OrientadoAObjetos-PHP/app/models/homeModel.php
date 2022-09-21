@@ -8,7 +8,7 @@
 
     public function setUser(string $name, int $email){
 
-      
+      $query_insert = "INSERT INTO users";
 
       return $name;
     }
