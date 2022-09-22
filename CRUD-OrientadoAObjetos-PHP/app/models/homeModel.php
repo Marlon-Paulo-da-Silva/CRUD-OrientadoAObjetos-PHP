@@ -6,11 +6,25 @@
       parent::__construct();
     }
 
-    public function setUser(string $name, int $email){
+    public function teste(){
+      echo "MODEL funções teste";
+    }
 
-      $query_insert = "INSERT INTO users";
+    public function setUser(string $name, string $email){
 
-      return $name;
+      $query_insert = "INSERT INTO users (username, email) VALUES (?, ?)";
+      $arrData = array($name, $email);
+      $request_insert = $this->insert($query_insert, $arrData);
+
+      return $request_insert;
+    }
+
+    public function getUser($id){
+
+      $query = "SELECT username, email FROM users WHERE id = {$id}";
+      $request = $this->select($query);
+
+      return $request;
     }
   }
 ?>

@@ -15,13 +15,18 @@ class Home extends Controllers {
   }
 
   public function register(){
-    $data = $this->model->setUser();
+    $data = $this->model->setUser("Marlon MVC", "marlon.paul@gmail.com");
     print_r($data);
   }
 
-  public function cart($params){
+  public function user($id){
+    $data = $this->model->getUser($id);
+    print_r($data);
+  }
+
+  public function cart($params = ''){
     $carrinho = $this->model->getCart($params);
-    echo "<br> Dados Carrinho: $carrinho";
+    echo "<br> Dados Carrinho: $params";
   }
 }
 ?>

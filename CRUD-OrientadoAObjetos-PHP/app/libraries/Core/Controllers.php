@@ -14,6 +14,7 @@
       if(file_exists($routClass)){
         require_once($routClass);
         $this->model = new $model();
+        
       }
     }
   }

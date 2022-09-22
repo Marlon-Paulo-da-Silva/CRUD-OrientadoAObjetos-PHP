@@ -13,7 +13,7 @@
       
     }
 
-    public function insert(string $query = '', array $arrValues = []){
+    public function insert(string $query, array $arrValues){
       $this->strQuery = $query;
       $this->arrValues = $arrValues;
 
