@@ -21,8 +21,17 @@
 
     public function getUser($id){
 
-      $query = "SELECT username, email FROM users WHERE id = {$id}";
-      $request = $this->select($query);
+      $sql = "SELECT username, email FROM users WHERE id = {$id}";
+      $request = $this->select($sql);
+
+      return $request;
+    }
+
+    public function updateUser(int $id, string $name, string $email){
+
+      $sql = "UPDATE users SET username = ?, email = ? WHERE id = {$id}";
+      $arrData = array($name, $email);
+      $request = $this->update($sql, $arrData);
 
       return $request;
     }

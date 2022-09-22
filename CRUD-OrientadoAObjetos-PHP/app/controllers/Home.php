@@ -23,10 +23,16 @@ class Home extends Controllers {
     $data = $this->model->getUser($id);
     print_r($data);
   }
+  
+  public function update(){
+    $data = $this->model->updateUser(1, "Roberto", "marlon@gmail");
+    print_r($data);
+  }
 
   public function cart($params = ''){
     $carrinho = $this->model->getCart($params);
     echo "<br> Dados Carrinho: $params";
   }
+
 }
 ?>
