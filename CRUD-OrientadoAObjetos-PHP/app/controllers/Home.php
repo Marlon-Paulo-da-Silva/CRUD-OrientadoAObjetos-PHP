@@ -15,7 +15,9 @@ class Home extends Controllers {
   }
 
   public function register(){
-    $data = $this->model->setUser("Marlon MVC", "marlon.paul@gmail.com");
+    $data = $this->model->setUser("Hugo MVC", "hugo@gmail.com");
+    $data = $this->model->setUser("Gabriel MVC", "gabo@gmail.com");
+
     print_r($data);
   }
 
@@ -25,13 +27,24 @@ class Home extends Controllers {
   }
   
   public function update(){
-    $data = $this->model->updateUser(1, "Roberto", "marlon@gmail");
+    $data = $this->model->updateUser(1, "Marlon", "marlon@gmail");
     print_r($data);
+  }
+
+  public function users($id){
+    $data = $this->model->getUsers($id);
+    
+    echo json_encode($data);
   }
 
   public function cart($params = ''){
     $carrinho = $this->model->getCart($params);
     echo "<br> Dados Carrinho: $params";
+  }
+
+  public function deleteuser($id){
+    $data = $this->model->delUser($id);
+    print_r($data);
   }
 
 }

@@ -39,12 +39,13 @@
       return $data;
     }
 
-    public function select_all(string $query = ''){
+    public function select_all(string $query){
       $this->strQuery = $query;
 
       $result = $this->connection->prepare($this->strQuery);
       $result->execute();
-      $data = $result->fetch(PDO::FETCH_ASSOC);
+
+      $data = $result->fetchAll(PDO::FETCH_ASSOC);
       return $data;
     }
 
@@ -61,8 +62,8 @@
       $this->strQuery = $query;
 
       $update = $this->connection->prepare($this->strQuery);
-      $update->execute();
-      return $update;
+      $del = $update->execute();
+      return $del;
     }
 
     

@@ -27,13 +27,29 @@
       return $request;
     }
 
-    public function updateUser(int $id, string $name, string $email){
+    public function getUsers(){
 
-      $sql = "UPDATE users SET username = ?, email = ? WHERE id = {$id}";
-      $arrData = array($name, $email);
-      $request = $this->update($sql, $arrData);
+      $sql = "SELECT username, email FROM users LIMIT 10";
+      $request = $this->select_all($sql);
 
       return $request;
     }
+    
+    public function updateUser(int $id, string $name, string $email){
+      
+      $sql = "UPDATE users SET username = ?, email = ? WHERE id = {$id}";
+      $arrData = array($name, $email);
+      $request = $this->update($sql, $arrData);
+      
+      return $request;
+    }
+  
+      public function delUser(int $id){
+  
+        $sql = "DELETE FROM users WHERE id = {$id}";
+        $request = $this->delete($sql);
+  
+        return $request;
+      }
   }
 ?>
