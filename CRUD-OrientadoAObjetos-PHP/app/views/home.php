@@ -7,10 +7,18 @@
   <title><?php echo $data['tag_page']; ?></title>
 </head>
 <body>
-  <section id="<?php $data['page_name']; ?>">
+  <section id="<?php echo $data['page_name']; ?>">
     <h1><?php echo $data['page_title']; ?></h1>
     
     <p><?php echo $data['page_content']; ?></p>
+    <br>
+    <br>
+    <?= BASE_URL; ?>
+    <br>
+    <br>
+    <?= base_url(); ?>
+    <br>
+    <br>
   </section>
 </body>
 </html>
