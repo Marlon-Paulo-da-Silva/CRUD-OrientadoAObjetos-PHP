@@ -16,7 +16,7 @@
     <?= dep($data);?>
     <br>
     <br>
-    <?= base_url(); ?>
+    <?= passGenerator();?>
     <br>
     <br>
   </section>

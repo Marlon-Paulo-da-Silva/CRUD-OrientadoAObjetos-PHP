@@ -48,4 +48,18 @@
     $string = str_ireplace("==","",$string);
     return $string;
 }
+
+//Gerar Password
+function passGenerator($length = 10){
+        $pass = "";
+        $longitudPass = $length;
+        $cadena = "ABCDEFGHIJKLMNOPQRSYUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+        $longitudCadena = strlen($cadena);
+
+        for ($i=1; $i <= $longitudPass; $i++) { 
+            $pos = rand(0,$longitudCadena-1);
+            $pass .= substr($cadena,$pos,1);
+        }
+        return $pass;
+    }
 ?>
