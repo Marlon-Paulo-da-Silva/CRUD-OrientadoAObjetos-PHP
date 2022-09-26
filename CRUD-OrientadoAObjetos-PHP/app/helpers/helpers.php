@@ -74,5 +74,8 @@
   }
 
   //Formato para valores monetarios
-  
+  function formatMoney($quantity){
+    $quantity = number_format($quantity,2,SPD,SPM);
+    return $quantity;
+  }
 ?>

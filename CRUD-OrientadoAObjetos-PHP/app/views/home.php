@@ -17,7 +17,12 @@
     <br>
     <br>
     <?= passGenerator();?>
+    <br>
+    <br>
     <?= tokenGenerator();?>
+    <br>
+    <br>
+    <?= formatMoney(59955.52);?>
     <br>
     <br>
   </section>
