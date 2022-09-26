@@ -1,5 +1,6 @@
 <?php
   //Load
+  $controller = ucwords($controller);
   $controllerFile = "app/controllers/" . $controller .".php";
   if (file_exists($controllerFile)) {
     // echo $controllerFile;
