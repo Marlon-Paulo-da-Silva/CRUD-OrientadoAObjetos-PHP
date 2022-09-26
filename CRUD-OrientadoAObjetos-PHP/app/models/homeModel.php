@@ -44,12 +44,12 @@
       return $request;
     }
   
-      public function delUser(int $id){
-  
-        $sql = "DELETE FROM users WHERE id = {$id}";
-        $request = $this->delete($sql);
-  
-        return $request;
-      }
+    public function delUser(int $id){
+
+      $sql = "DELETE FROM users WHERE id = {$id}";
+      $request = $this->delete($sql);
+
+      return $request;
+    }
   }
 ?>

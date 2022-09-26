@@ -13,7 +13,7 @@
     <p><?php echo $data['page_content']; ?></p>
     <br>
     <br>
-    <?= BASE_URL; ?>
+    <?= dep($data);?>
     <br>
     <br>
     <?= base_url(); ?>

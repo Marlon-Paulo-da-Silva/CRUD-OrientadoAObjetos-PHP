@@ -127,5 +127,4 @@ class URI {
       return self::$finalBase;
   }
   }
-  ?>
 ?>
