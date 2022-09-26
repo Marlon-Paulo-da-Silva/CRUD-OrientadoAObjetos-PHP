@@ -3,9 +3,13 @@
   $base = new URI();
   $base =  $base->base();
   
+  
   define("BASE_URL", $base);
   // const BASE_URL = $base->base();
   // const BASE_URL = URI::base();
+
+  // Zona horária
+  date_default_timezone_set('America/Sao_Paulo');
   
   // Dados para conectar base de dados
   const DB_HOST = "localhost";
