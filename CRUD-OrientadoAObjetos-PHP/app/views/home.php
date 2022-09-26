@@ -22,7 +22,7 @@
     <?= tokenGenerator();?>
     <br>
     <br>
-    <?= formatMoney(59955.52);?>
+    <?= SMONEY . " " . formatMoney(59955.52);?>
     <br>
     <br>
   </section>

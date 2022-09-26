@@ -18,4 +18,7 @@
   const SPD = ",";
   const SPM = ".";
 
+  //Simbolo da moeda
+  const SMONEY = "R$";
+
 ?>
