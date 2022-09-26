@@ -10,7 +10,7 @@
   <h3 align="center">Template</h3>
 
   <p align="center">
-    Template MVC para crir projetos futuros
+    Template MVC para criar projetos futuros
     <!-- <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
