@@ -7,24 +7,6 @@
   <title><?php echo $data['tag_page']; ?></title>
 </head>
 <body>
-  <section id="<?php echo $data['page_name']; ?>">
-    <h1><?php echo $data['page_title']; ?></h1>
-    
-    <p><?php echo $data['page_content']; ?></p>
-    <br>
-    <br>
-    <?= dep($data);?>
-    <br>
-    <br>
-    <?= passGenerator();?>
-    <br>
-    <br>
-    <?= tokenGenerator();?>
-    <br>
-    <br>
-    <?= SMONEY . " " . formatMoney(59955.52);?>
-    <br>
-    <br>
-  </section>
+
 </body>
 </html>
