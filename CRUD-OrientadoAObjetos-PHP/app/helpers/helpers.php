@@ -47,19 +47,32 @@
     $string = str_ireplace("]","",$string);
     $string = str_ireplace("==","",$string);
     return $string;
-}
+  }
 
-//Gerar Password
-function passGenerator($length = 10){
-        $pass = "";
-        $longitudPass = $length;
-        $cadena = "ABCDEFGHIJKLMNOPQRSYUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
-        $longitudCadena = strlen($cadena);
+  //Gerar Password
+  function passGenerator($length = 10){
+      $pass = "";
+      $longitudPass = $length;
+      $cadena = "ABCDEFGHIJKLMNOPQRSYUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+      $longitudCadena = strlen($cadena);
 
-        for ($i=1; $i <= $longitudPass; $i++) { 
-            $pos = rand(0,$longitudCadena-1);
-            $pass .= substr($cadena,$pos,1);
-        }
-        return $pass;
+      for ($i=1; $i <= $longitudPass; $i++) { 
+          $pos = rand(0,$longitudCadena-1);
+          $pass .= substr($cadena,$pos,1);
+      }
+      return $pass;
+  }
+
+  //Gerar Token
+  function tokenGenerator(){
+    $completeToken = '';
+    for($count = 1; $count <= 4; $count++){
+        $token = bin2hex(random_bytes(10));
+        $completeToken .= $token . '-';
     }
+    return trim($completeToken, '-');
+  }
+
+  //Formato para valores monetarios
+  
 ?>

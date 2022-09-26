@@ -17,6 +17,7 @@
     <br>
     <br>
     <?= passGenerator();?>
+    <?= tokenGenerator();?>
     <br>
     <br>
   </section>
